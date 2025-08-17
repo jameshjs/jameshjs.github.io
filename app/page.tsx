@@ -10,7 +10,7 @@ export default function Portfolio() {
   return (
     <div className="min-h-screen bg-background">
       <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur">
-        <div className="container flex h-14 items-center justify-center">
+        <div className="mx-auto max-w-4xl px-4 flex h-14 items-center justify-center">
           <div className="flex items-center gap-8">
             <div className="font-bold">
               <Link href="/">JD</Link>
@@ -31,19 +31,19 @@ export default function Portfolio() {
             </nav>
             <div className="flex items-center gap-2">
               <Button variant="ghost" size="icon" asChild>
-                <Link href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+                <Link href="https://github.com/jameshjs" target="_blank" rel="noopener noreferrer">
                   <Github className="h-4 w-4" />
                   <span className="sr-only">GitHub</span>
                 </Link>
               </Button>
               <Button variant="ghost" size="icon" asChild>
-                <Link href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
+                <Link href="linkedin.com/in/james-hong-uw/" target="_blank" rel="noopener noreferrer">
                   <Linkedin className="h-4 w-4" />
                   <span className="sr-only">LinkedIn</span>
                 </Link>
               </Button>
               <Button variant="ghost" size="icon" asChild>
-                <Link href="mailto:your.email@example.com">
+                <Link href="mailto:j8hong@uwaterloo.ca">
                   <Mail className="h-4 w-4" />
                   <span className="sr-only">Email</span>
                 </Link>
@@ -53,12 +53,12 @@ export default function Portfolio() {
         </div>
       </header>
 
-      <main className="container py-12 md:py-24">
+      <main className="mx-auto max-w-4xl px-4 py-12 md:py-24">
         {/* Hero Section */}
         <section className="flex flex-col md:flex-row gap-8 items-center mb-24">
           <div className="flex-1 space-y-4">
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
-              Hi, I'm <span className="text-primary">John Doe</span>
+              Hi, I'm <span className="text-primary">James Hong</span>
             </h1>
             <p className="text-xl text-muted-foreground">Computer Science & Finance Student</p>
             <p className="text-muted-foreground max-w-[600px]">
@@ -90,7 +90,7 @@ export default function Portfolio() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-4">
               <p>
-                I'm a final-year student pursuing a dual degree in Computer Science and Finance. My academic journey has
+                I'm a 3rd-year student pursuing a dual degree in Computer Science and Finance. My academic journey has
                 equipped me with a unique blend of technical programming skills and financial knowledge.
               </p>
               <p>
@@ -279,20 +279,20 @@ export default function Portfolio() {
               <CardContent className="space-y-4">
                 <div className="flex items-center gap-3">
                   <Mail className="h-5 w-5 text-muted-foreground" />
-                  <Link href="mailto:your.email@example.com" className="hover:underline">
-                    your.email@example.com
+                  <Link href="mailto:j8hong@uwaterloo.ca" className="hover:underline">
+                    j8hong@uwaterloo.ca
                   </Link>
                 </div>
                 <div className="flex items-center gap-3">
                   <Linkedin className="h-5 w-5 text-muted-foreground" />
-                  <Link href="https://linkedin.com/in/yourusername" target="_blank" className="hover:underline">
-                    linkedin.com/in/yourusername
+                  <Link href="https://linkedin.com/in/james-hong-uw" target="_blank" className="hover:underline">
+                    linkedin.com/in/james-hong-uw/
                   </Link>
                 </div>
                 <div className="flex items-center gap-3">
                   <Github className="h-5 w-5 text-muted-foreground" />
-                  <Link href="https://github.com/yourusername" target="_blank" className="hover:underline">
-                    github.com/yourusername
+                  <Link href="https://github.com/jameshjs" target="_blank" className="hover:underline">
+                    github.com/jameshjs
                   </Link>
                 </div>
               </CardContent>
@@ -315,7 +315,7 @@ export default function Portfolio() {
               </ul>
               <div className="pt-4">
                 <Button asChild>
-                  <Link href="mailto:your.email@example.com">
+                  <Link href="mailto:j8hong@uwaterloo.ca">
                     <Mail className="mr-2 h-4 w-4" /> Send me an email
                   </Link>
                 </Button>
@@ -326,11 +326,11 @@ export default function Portfolio() {
       </main>
 
       <footer className="border-t py-6">
-        <div className="container flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm text-muted-foreground">© {new Date().getFullYear()} John Doe. All rights reserved.</p>
+        <div className="mx-auto max-w-4xl px-4 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-sm text-muted-foreground">© {new Date().getFullYear()} James Hong. All rights reserved.</p>
           <div className="flex items-center gap-4 mt-4 md:mt-0">
             <Link
-              href="https://github.com/yourusername"
+              href="https://github.com/jameshjs"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-foreground"
@@ -339,7 +339,7 @@ export default function Portfolio() {
               <span className="sr-only">GitHub</span>
             </Link>
             <Link
-              href="https://linkedin.com/in/yourusername"
+              href="https://linkedin.com/in/james-hong-uw/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-foreground"
@@ -347,7 +347,7 @@ export default function Portfolio() {
               <Linkedin className="h-5 w-5" />
               <span className="sr-only">LinkedIn</span>
             </Link>
-            <Link href="mailto:your.email@example.com" className="text-muted-foreground hover:text-foreground">
+            <Link href="mailto:j8hong@uwaterloo.ca" className="text-muted-foreground hover:text-foreground">
               <Mail className="h-5 w-5" />
               <span className="sr-only">Email</span>
             </Link>
