@@ -19,6 +19,9 @@ export default function Portfolio() {
               <Link href="#about" className="text-muted-foreground hover:text-foreground transition-colors">
                 About
               </Link>
+              <Link href="#education" className="text-muted-foreground hover:text-foreground transition-colors">
+                Education
+              </Link>
               <Link href="#experience" className="text-muted-foreground hover:text-foreground transition-colors">
                 Work
               </Link>
@@ -77,8 +80,8 @@ export default function Portfolio() {
             </div>
           </div>
           <div className="flex-shrink-0">
-            <Avatar className="h-48 w-48 border-4 border-background shadow-xl">
-              <AvatarImage src="/placeholder.svg?height=192&width=192" alt="Profile" />
+            <Avatar className="h-80 w-80 border-4 border-background shadow-xl">
+              <AvatarImage src="/jhong.png?height=192&width=192" alt="Profile" />
               <AvatarFallback>JD</AvatarFallback>
             </Avatar>
           </div>
@@ -101,12 +104,12 @@ export default function Portfolio() {
             <div className="space-y-4">
               <h3 className="text-xl font-semibold">Skills</h3>
               <div className="flex flex-wrap gap-2">
+                <Badge>Python</Badge>
                 <Badge>JavaScript</Badge>
                 <Badge>TypeScript</Badge>
                 <Badge>React</Badge>
                 <Badge>Next.js</Badge>
                 <Badge>Node.js</Badge>
-                <Badge>Python</Badge>
                 <Badge>SQL</Badge>
                 <Badge>Financial Analysis</Badge>
                 <Badge>Data Structures</Badge>
@@ -117,11 +120,55 @@ export default function Portfolio() {
           </div>
         </section>
 
+        {/* Education Section */}
+        <section id="education" className="mb-24 scroll-mt-20">
+          <h2 className="text-3xl font-bold mb-8">Education</h2>
+          <div className="space-y-8">
+            <Card className="transition-all duration-500 hover:scale-105">
+              <CardHeader>
+                <div className="flex justify-between items-start">
+                  <div>
+                    <CardTitle>University of Waterloo</CardTitle>
+                    <CardDescription>Bachelor of Computer Science & Bachelor of Arts in Finance</CardDescription>
+                  </div>
+                  <Badge>2021 - 2025</Badge>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  <div>
+                    <h4 className="font-semibold text-sm text-muted-foreground mb-2">Relevant Coursework</h4>
+                    <div className="flex flex-wrap gap-2">
+                      <Badge variant="outline">Data Structures & Algorithms</Badge>
+                      <Badge variant="outline">Software Engineering</Badge>
+                      <Badge variant="outline">Database Systems</Badge>
+                      <Badge variant="outline">Machine Learning</Badge>
+                      <Badge variant="outline">Financial Management</Badge>
+                      <Badge variant="outline">Investment Analysis</Badge>
+                      <Badge variant="outline">Corporate Finance</Badge>
+                      <Badge variant="outline">Statistics</Badge>
+                    </div>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-sm text-muted-foreground mb-2">Activities & Achievements</h4>
+                    <ul className="list-disc pl-5 space-y-1 text-sm">
+                      <li>Dean's List (2021-2023)</li>
+                      <li>Computer Science Student Association - Member</li>
+                      <li>Finance Club - Active Participant</li>
+                      <li>Hack the Valley Hackathon - Finalist</li>
+                    </ul>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
         {/* Experience Section */}
         <section id="experience" className="mb-24 scroll-mt-20">
           <h2 className="text-3xl font-bold mb-8">Work Experience</h2>
           <div className="space-y-8">
-            <Card>
+            <Card className="transition-all duration-500 hover:scale-105">
               <CardHeader>
                 <div className="flex justify-between items-start">
                   <div>
@@ -143,7 +190,7 @@ export default function Portfolio() {
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="transition-all duration-500 hover:scale-105">
               <CardHeader>
                 <div className="flex justify-between items-start">
                   <div>
@@ -163,7 +210,7 @@ export default function Portfolio() {
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="transition-all duration-500 hover:scale-105">
               <CardHeader>
                 <div className="flex justify-between items-start">
                   <div>
@@ -188,7 +235,7 @@ export default function Portfolio() {
         <section id="projects" className="mb-24 scroll-mt-20">
           <h2 className="text-3xl font-bold mb-8">Personal Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Card className="flex flex-col h-full">
+            <Card className="flex flex-col h-full transition-all duration-500 hover:scale-105">
               <CardHeader>
                 <CardTitle>Stock Portfolio Analyzer</CardTitle>
                 <CardDescription>Full-stack web application</CardDescription>
@@ -214,7 +261,7 @@ export default function Portfolio() {
               </CardFooter>
             </Card>
 
-            <Card className="flex flex-col h-full">
+            <Card className="flex flex-col h-full transition-all duration-500 hover:scale-105">
               <CardHeader>
                 <CardTitle>Algorithmic Trading Bot</CardTitle>
                 <CardDescription>Python application</CardDescription>
@@ -240,7 +287,7 @@ export default function Portfolio() {
               </CardFooter>
             </Card>
 
-            <Card className="flex flex-col h-full">
+            <Card className="flex flex-col h-full transition-all duration-500 hover:scale-105">
               <CardHeader>
                 <CardTitle>Personal Finance Dashboard</CardTitle>
                 <CardDescription>Web application</CardDescription>
