@@ -129,7 +129,7 @@ export default function Portfolio() {
                 <div className="flex justify-between items-start">
                   <div>
                     <CardTitle>University of Waterloo</CardTitle>
-                    <CardDescription>Bachelor of Computer Science & Bachelor of Arts in Finance</CardDescription>
+                    <CardDescription>Bachelor of Computer Science & Finance</CardDescription>
                   </div>
                   <Badge>2021 - 2025</Badge>
                 </div>
@@ -152,10 +152,7 @@ export default function Portfolio() {
                   <div>
                     <h4 className="font-semibold text-sm text-muted-foreground mb-2">Activities & Achievements</h4>
                     <ul className="list-disc pl-5 space-y-1 text-sm">
-                      <li>Dean's List (2021-2023)</li>
-                      <li>Computer Science Student Association - Member</li>
-                      <li>Finance Club - Active Participant</li>
-                      <li>Hack the Valley Hackathon - Finalist</li>
+                      <li>Varsity Fencing Team</li>
                     </ul>
                   </div>
                 </div>
@@ -242,19 +239,18 @@ export default function Portfolio() {
               </CardHeader>
               <CardContent className="flex-grow">
                 <p className="text-muted-foreground">
-                  A web application that helps users analyze their stock portfolios, track performance, and get insights
-                  based on financial metrics.
+                  A portfolio optimization engine that helps users find the optimal allocation of their portfolio, based on their risk tolerance and investment goals.
                 </p>
                 <div className="flex flex-wrap gap-2 mt-4">
-                  <Badge variant="outline">React</Badge>
-                  <Badge variant="outline">Node.js</Badge>
-                  <Badge variant="outline">MongoDB</Badge>
-                  <Badge variant="outline">Financial APIs</Badge>
+                  <Badge variant="outline">Python</Badge>
+                  <Badge variant="outline">Pandas</Badge>
+                  <Badge variant="outline">yfinance</Badge>
+                  <Badge variant="outline">Matplotlib</Badge>
                 </div>
               </CardContent>
               <CardFooter>
                 <Button variant="outline" size="sm" className="w-full" asChild>
-                  <Link href="https://github.com/yourusername/stock-portfolio-analyzer" target="_blank">
+                  <Link href="https://github.com/jameshjs/Safest-Portfolio-Generator" target="_blank">
                     <Github className="mr-2 h-4 w-4" /> View Project
                   </Link>
                 </Button>
@@ -306,7 +302,7 @@ export default function Portfolio() {
               </CardContent>
               <CardFooter>
                 <Button variant="outline" size="sm" className="w-full" asChild>
-                  <Link href="https://github.com/yourusername/finance-dashboard" target="_blank">
+                  <Link href="https://github.com/jameshjs/Factor-Based-Trading-Strategies" target="_blank">
                     <Github className="mr-2 h-4 w-4" /> View Project
                   </Link>
                 </Button>
