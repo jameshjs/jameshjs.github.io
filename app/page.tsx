@@ -13,7 +13,7 @@ export default function Portfolio() {
         <div className="mx-auto max-w-4xl px-4 flex h-14 items-center justify-center">
           <div className="flex items-center gap-8">
             <div className="font-bold">
-              <Link href="/">JD</Link>
+              <Link href="/">JH</Link>
             </div>
             <nav className="flex gap-6">
               <Link href="#about" className="text-muted-foreground hover:text-foreground transition-colors">
@@ -40,7 +40,7 @@ export default function Portfolio() {
                 </Link>
               </Button>
               <Button variant="ghost" size="icon" asChild>
-                <Link href="linkedin.com/in/james-hong-uw/" target="_blank" rel="noopener noreferrer">
+                <Link href="https://linkedin.com/in/james-hong-uw/" target="_blank" rel="noopener noreferrer">
                   <Linkedin className="h-4 w-4" />
                   <span className="sr-only">LinkedIn</span>
                 </Link>
@@ -66,7 +66,7 @@ export default function Portfolio() {
             <p className="text-xl text-muted-foreground">Computer Science & Finance Student</p>
             <p className="text-muted-foreground max-w-[600px]">
               I'm passionate about building software solutions for financial problems. Currently studying Computer
-              Science and Finance, with experience in full-stack development and financial analysis.
+              Science and Finance at University of Waterloo, with experience in full-stack development and financial analysis.
             </p>
             <div className="flex gap-4 pt-4">
               <Button asChild>
@@ -82,7 +82,7 @@ export default function Portfolio() {
           <div className="flex-shrink-0">
             <Avatar className="h-80 w-80 border-4 border-background shadow-xl">
               <AvatarImage src="/jhong.png?height=192&width=192" alt="Profile" />
-              <AvatarFallback>JD</AvatarFallback>
+              <AvatarFallback>JH</AvatarFallback>
             </Avatar>
           </div>
         </section>
@@ -93,7 +93,7 @@ export default function Portfolio() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-4">
               <p>
-                I'm a 3rd-year student pursuing a dual degree in Computer Science and Finance. My academic journey has
+                I'm a 3rd-year student pursuing a dual degree in Computer Science and Finance at University of Waterloo. My academic journey has
                 equipped me with a unique blend of technical programming skills and financial knowledge.
               </p>
               <p>
@@ -105,16 +105,17 @@ export default function Portfolio() {
               <h3 className="text-xl font-semibold">Skills</h3>
               <div className="flex flex-wrap gap-2">
                 <Badge>Python</Badge>
-                <Badge>JavaScript</Badge>
-                <Badge>TypeScript</Badge>
-                <Badge>React</Badge>
-                <Badge>Next.js</Badge>
-                <Badge>Node.js</Badge>
+                <Badge>MATLAB</Badge>
+                <Badge>R</Badge>
                 <Badge>SQL</Badge>
+                <Badge>VBA</Badge>
+                <Badge>C/C++</Badge>
+                <Badge>C#</Badge>
+                <Badge>scikit-learn</Badge>
+                <Badge>pandas</Badge>
                 <Badge>Financial Analysis</Badge>
-                <Badge>Data Structures</Badge>
-                <Badge>Algorithms</Badge>
-                <Badge>Machine Learning</Badge>
+                <Badge>Bloomberg</Badge>
+                <Badge>Power BI</Badge>
               </div>
             </div>
           </div>
@@ -131,7 +132,7 @@ export default function Portfolio() {
                     <CardTitle>University of Waterloo</CardTitle>
                     <CardDescription>Bachelor of Computer Science & Finance</CardDescription>
                   </div>
-                  <Badge>2021 - 2025</Badge>
+                  <Badge>Sept 2022 - Dec 2026</Badge>
                 </div>
               </CardHeader>
               <CardContent>
@@ -145,14 +146,22 @@ export default function Portfolio() {
                       <Badge variant="outline">Machine Learning</Badge>
                       <Badge variant="outline">Financial Management</Badge>
                       <Badge variant="outline">Investment Analysis</Badge>
+                      <Badge variant="outline">Financial Data Analytics</Badge>
+                      <Badge variant="outline">Derivative Securities</Badge>
+                      <Badge variant="outline">Global Capital Market</Badge>
                       <Badge variant="outline">Corporate Finance</Badge>
-                      <Badge variant="outline">Statistics</Badge>
+                      <Badge variant="outline">Financial Reporting</Badge>
+                      <Badge variant="outline">Economics</Badge>
+                      <Badge variant="outline">Business</Badge>
+                      <Badge variant="outline">Calculus</Badge>
+                      <Badge variant="outline">Probability & Statistics</Badge>
                     </div>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-sm text-muted-foreground mb-2">Activities & Achievements</h4>
+                    <h4 className="font-semibold text-sm text-muted-foreground mb-2">Achievements</h4>
                     <ul className="list-disc pl-5 space-y-1 text-sm">
-                      <li>Varsity Fencing Team</li>
+                      <li>President's Scholarship of Distinction: recognized for outstanding academic achievements</li>
+                      <li>Varsity Fencing Team: competing with University of Waterloo varsity fencing team</li>
                     </ul>
                   </div>
                 </div>
@@ -169,21 +178,16 @@ export default function Portfolio() {
               <CardHeader>
                 <div className="flex justify-between items-start">
                   <div>
-                    <CardTitle>Software Engineering Intern</CardTitle>
-                    <CardDescription>Financial Tech Company</CardDescription>
+                    <CardTitle>Software Engineer</CardTitle>
+                    <CardDescription>Food For Good</CardDescription>
                   </div>
-                  <Badge>Summer 2023</Badge>
+                  <Badge>May 2025 - Aug 2025</Badge>
                 </div>
               </CardHeader>
               <CardContent>
-                <ul className="list-disc pl-5 space-y-2">
-                  <li>Developed and maintained features for a financial dashboard using React and TypeScript</li>
-                  <li>Implemented RESTful APIs using Node.js and Express</li>
-                  <li>
-                    Collaborated with the data science team to integrate financial models into the web application
-                  </li>
-                  <li>Participated in code reviews and agile development processes</li>
-                </ul>
+                <p className="text-muted-foreground">
+                  Designed and deployed backend system for digital payments and automated tax reporting with Stripe integration, and automated Salesforce CRM workflows reducing manual effort by 1 hour daily.
+                </p>
               </CardContent>
             </Card>
 
@@ -191,19 +195,16 @@ export default function Portfolio() {
               <CardHeader>
                 <div className="flex justify-between items-start">
                   <div>
-                    <CardTitle>Financial Analyst Intern</CardTitle>
-                    <CardDescription>Investment Bank</CardDescription>
+                    <CardTitle>Software Engineer</CardTitle>
+                    <CardDescription>Canadian Institute for Health Information</CardDescription>
                   </div>
-                  <Badge>Summer 2022</Badge>
+                  <Badge>Aug 2024 - Dec 2024</Badge>
                 </div>
               </CardHeader>
               <CardContent>
-                <ul className="list-disc pl-5 space-y-2">
-                  <li>Assisted in financial modeling and valuation of companies in the technology sector</li>
-                  <li>Conducted market research and competitive analysis</li>
-                  <li>Created data visualizations and reports for client presentations</li>
-                  <li>Automated data collection processes using Python scripts</li>
-                </ul>
+                <p className="text-muted-foreground">
+                  Developed scalable data pipeline processing 100M+ healthcare transactions, optimized performance with Apache Spark reducing query latency by 70%, and led research on physician compensation model.
+                </p>
               </CardContent>
             </Card>
 
@@ -211,18 +212,33 @@ export default function Portfolio() {
               <CardHeader>
                 <div className="flex justify-between items-start">
                   <div>
-                    <CardTitle>Research Assistant</CardTitle>
-                    <CardDescription>University Finance Department</CardDescription>
+                    <CardTitle>Full Stack Developer</CardTitle>
+                    <CardDescription>Home Hardware</CardDescription>
                   </div>
-                  <Badge>2021-2022</Badge>
+                  <Badge>Jan 2024 - Apr 2024</Badge>
                 </div>
               </CardHeader>
               <CardContent>
-                <ul className="list-disc pl-5 space-y-2">
-                  <li>Assisted professors with research on algorithmic trading strategies</li>
-                  <li>Collected and analyzed financial data using Python and R</li>
-                  <li>Contributed to academic papers on market efficiency</li>
-                </ul>
+                <p className="text-muted-foreground">
+                  Built full-stack Retail Management Dashboard using C# .NET framework and SQL, and developed sales forecasting model achieving 8.7% average forecast error.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="transition-all duration-500 hover:scale-105">
+              <CardHeader>
+                <div className="flex justify-between items-start">
+                  <div>
+                    <CardTitle>Data Analyst</CardTitle>
+                    <CardDescription>Toronto Transit Commission (TTC)</CardDescription>
+                  </div>
+                  <Badge>May 2023 - Aug 2023</Badge>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  Cleaned and normalized 50k+ operational cost and incident records improving dataset reliability by 95%, and managed team of 8 interns monitoring electronic device incidents for 100+ clients.
+                </p>
               </CardContent>
             </Card>
           </div>
@@ -232,6 +248,56 @@ export default function Portfolio() {
         <section id="projects" className="mb-24 scroll-mt-20">
           <h2 className="text-3xl font-bold mb-8">Personal Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Card className="flex flex-col h-full transition-all duration-500 hover:scale-105">
+              <CardHeader>
+                <CardTitle>Factor-Based Trading Strategies</CardTitle>
+                <CardDescription>Python application</CardDescription>
+              </CardHeader>
+              <CardContent className="flex-grow">
+                <p className="text-muted-foreground">
+                  Implemented statistical methods including CAPM and Fama-French models to assess portfolio performance, identifying strategies that outperformed the market by an average of 3.5% annually.
+                </p>
+                <div className="flex flex-wrap gap-2 mt-4">
+                  <Badge variant="outline">Python</Badge>
+                  <Badge variant="outline">CAPM</Badge>
+                  <Badge variant="outline">Fama-French</Badge>
+                  <Badge variant="outline">Trading Strategies</Badge>
+                </div>
+              </CardContent>
+              <CardFooter>
+                <Button variant="outline" size="sm" className="w-full" asChild>
+                  <Link href="https://github.com/jameshjs/Factor-Based-Trading-Strategies" target="_blank">
+                    <Github className="mr-2 h-4 w-4" /> View Project
+                  </Link>
+                </Button>
+              </CardFooter>
+            </Card>
+
+            <Card className="flex flex-col h-full transition-all duration-500 hover:scale-105">
+              <CardHeader>
+                <CardTitle>Financial Portfolio Generator</CardTitle>
+                <CardDescription>Python application</CardDescription>
+              </CardHeader>
+              <CardContent className="flex-grow">
+                <p className="text-muted-foreground">
+                  Implemented a portfolio optimization engine using regression on historical stock prices, minimizing portfolio risk. Secured 1st place out of 100+ participants in a course competition.
+                </p>
+                <div className="flex flex-wrap gap-2 mt-4">
+                  <Badge variant="outline">Python</Badge>
+                  <Badge variant="outline">Pandas</Badge>
+                  <Badge variant="outline">yfinance</Badge>
+                  <Badge variant="outline">Matplotlib</Badge>
+                </div>
+              </CardContent>
+              <CardFooter>
+                <Button variant="outline" size="sm" className="w-full" asChild>
+                  <Link href="https://github.com/jameshjs/Safest-Portfolio-Generator" target="_blank">
+                    <Github className="mr-2 h-4 w-4" /> View Project
+                  </Link>
+                </Button>
+              </CardFooter>
+            </Card>
+
             <Card className="flex flex-col h-full transition-all duration-500 hover:scale-105">
               <CardHeader>
                 <CardTitle>Stock Portfolio Analyzer</CardTitle>
@@ -276,7 +342,7 @@ export default function Portfolio() {
               </CardContent>
               <CardFooter>
                 <Button variant="outline" size="sm" className="w-full" asChild>
-                  <Link href="https://github.com/yourusername/algo-trading-bot" target="_blank">
+                  <Link href="https://github.com/jameshjs/Factor-Based-Trading-Strategies" target="_blank">
                     <Github className="mr-2 h-4 w-4" /> View Project
                   </Link>
                 </Button>

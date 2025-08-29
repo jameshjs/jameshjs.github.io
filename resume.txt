@@ -1,0 +1,252 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+\usepackage{bm}
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+ \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+%\usepackage{fontawesome5}
+\usepackage{hyperref}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\usepackage{fontawesome5}
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\makeatletter
+\newcommand{\github}[1]{%
+   \href{#1}{\faGithubSquare}%
+}
+\makeatother
+
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\Huge \scshape James Hong} \\ \vspace{1pt}
+    \small 647-702-1128 $|$ \href{mailto:j8hong@uwaterloo.ca}{\underline{j8hong@uwaterloo.ca}} $|$ 
+    \href{https://jameshjs.github.io}{\underline{jameshjs.github.io}} $|$
+    \href{https://linkedin.com/in/james-hong-uw}{\underline{LinkedIn}} $|$ \href{https://github.com/jameshjs}{\underline{GitHub}}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Waterloo}{Waterloo, ON}
+      {Bachelor of Computer Science \& Finance}{Sept 2022 -- Dec 2026}
+    \resumeItemListStart
+        \resumeItem{\textbf{Courses}: Financial Data Analytics, Derivative Securities, Global Capital Market, Corporate Finance, Financial Reporting, Economics, Business, Calculus, Probability \& Statistics}
+        \resumeItem{President’s Scholarship of Distinction: recognized for outstanding academic achievements}
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Software Engineer}{May 2025 -- Aug 2025}
+      {Food For Good}{Toronto, ON}
+      \resumeItemListStart
+        \resumeItem{Designed and deployed a backend system to \textbf{process digital payments} and \textbf{automate tax reporting}, integrating \textbf{Stripe} with a \textbf{RESTful API}, adding real-time notifications and multilingual reporting, supporting \textbf{5,000+} active users}
+        \resumeItem{Designed and automated \textbf{Salesforce CRM} workflows with Windows \textbf{Copilot} and email integration, reducing manual effort by \textbf{1 hour daily} and accelerating customer data retrieval by \textbf{$\bm{\sim}$50\%} for \textbf{10,000+} business contacts}
+
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Software Engineer}{Aug 2024 -- Dec 2024}
+      {Canadian Institute for Health Information}{Toronto, ON}
+      \resumeItemListStart
+        \resumeItem{Developed a scalable data pipeline in \textbf{Python} and \textbf{SQL} to process over \textbf{100M+} healthcare payment transactions, achieved 99.9\% validation accuracy by benchmarking outputs against the legacy system}
+        \resumeItem{Optimized financial data pipeline performance using \textbf{Apache Spark}'s distributed processing capabilities, reducing query latency by 70\% while ensuring data integrity through validation checks}
+        \resumeItem{\textbf{Led research} on a new physician compensation model, uncovering trends and presenting findings to \textbf{200+} stakeholders, informing healthcare funding policy}
+        \resumeItem{Designed an  \textbf{interactive dashboard} and machine learning models using \textbf{scikit-learn} to extract key insights in patient characteristics, supporting policy and budget decisions}
+
+      \resumeItemListEnd
+      
+% -----------Multiple Positions Heading-----------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+
+    \resumeSubheading
+      {Full Stack Developer}{Jan 2024 -- Apr 2024}
+      {Home Hardware}{Waterloo, ON}
+      \resumeItemListStart
+        \resumeItem{Built a full-stack Retail Management Dashboard using \textbf{C\# .NET framework} and SQL to streamline inventory tracking and sales analytics for 100+ products}
+        \resumeItem{Built a sales forecasting model using \textbf{regression} and \textbf{time-series analysis}, achieving an average forecast error of 8.7\%, enabling more accurate demand planning and financial projections}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Data Analyst}{May 2023 -- Aug 2023}
+      {Toronto Transit Commission (TTC)}{Toronto, ON}
+      \resumeItemListStart
+        \resumeItem{Cleaned and normalized \textbf{50k+} operational cost and incident records, improved dataset reliability by 95\% through \textbf{anomaly detection and normalization}, enhancing financial reporting accuracy}
+        \resumeItem{\textbf{Managed a team of 8 interns} to monitor and document the progress of electronic device incidents for 100+ clients, ensuring timely follow-ups and maintaining client satisfaction}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+
+          \resumeProjectHeading
+          {\href{https://github.com/jameshjs/Factor-Based-Trading-Strategies}{ \faGithub}\hspace{1em}\textbf{Factor-Based Trading Strategies}$|$ \emph{Python}}
+          
+          \resumeItemListStart
+            \resumeItem{Implemented statistical methods to assess portfolio performance, including the \textbf{CAPM} and \textbf{Fama-French models}, resulting in the identification of strategies that outperformed the market by an average of \textbf{3.5\%} annually}
+            \resumeItem{Developed and evaluated \textbf{trading strategies} for the Nasdaq stocks by constructing and analyzing \textbf{hedging portfolios} based on the six \textbf{financial factors}}
+          \resumeItemListEnd
+
+    
+      \resumeProjectHeading
+          {\href{https://github.com/jameshjs/Safest-Portfolio-Generator}{ \faGithub}\hspace{1em}\textbf{Financial Portfolio Generator} $|$ \emph{Python, Pandas, yfinance, Matplotlib}}
+          
+          \resumeItemListStart
+            \resumeItem{Implemented a portfolio optimization engine using regression on historical stock price, minimizing portfolio risk}
+            \resumeItem{Improved performance by 50\% by parallelizing API calls, enabling faster backtesting and data retrieval}
+            \resumeItem{Secured\textbf{ 1st place out of 100+ participants} in a course competition as part of a 3-person team}
+        \resumeItemListEnd
+    
+    % \resumeProjectHeading
+    %       {\href{https://github.com/jameshjs/Constructor-Game}{ \faGithub}\hspace{1em}\textbf{Catan Video Game}$|$ \emph{C++, Git}}{}%{August 2023 -- October 2024}
+    %       \resumeItemListStart
+    %         \resumeItem{Recreated the game of Catan in C++, incorporated \textbf{design patterns} and SOLID principles for object management}
+    %       \resumeItemListEnd
+    % \resumeSubHeadingListEnd
+
+    
+        
+      % \resumeProjectHeading
+      %     { \faGithub}\hspace{1em}\textbf{Inventory AI Agent}$|$ \emph{Python, LangChain, JavaScript, Firestore}}{}%{Jan 2024 -- Feb 2024}
+      %     \resumeItemListStart
+      %       \resumeItem{Designed a Multi-AI Agent Application to handle user queries regarding inventory and shipment details efficiently}
+      %       \resumeItem{Utilized \textbf{LangChain} and \textbf{RAG} to process natural language queries and provide accurate and context-aware insights}
+      %       \resumeItem{Created an interactive frontend using Streamlit for query submission}
+      %     \resumeItemListEnd
+    % \resumeProjectHeading
+    %       {\href{https://github.com/jameshjs/Constructor-Game}{ \faGithub}\hspace{1em}\textbf{Catan Video Game}$|$ \emph{C++, Git}}{}%{August 2023 -- October 2024}
+    %       \resumeItemListStart
+    %         \resumeItem{Recreated the game of Catan in C++, incorporated \textbf{design patterns} and SOLID principles for object management}
+    %       \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+    \textbf{Programming Languages}{: Python, MATLAB, R, SQL (Postgres), VBA, C/C++, C\#, scikit-learn, pandas} \\
+    \textbf{Technology}{: Proficient in Excel, PowerPoint, Bloomberg, Power Bi} \\
+    \textbf{Certificates}{: Currently working towards CFA Level I}}}
+
+ \end{itemize}
+
+%-------------------------------------------
+\end{document}
