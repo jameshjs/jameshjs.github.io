@@ -174,6 +174,23 @@ export default function Portfolio() {
         <section id="experience" className="mb-24 scroll-mt-20">
           <h2 className="text-3xl font-bold mb-8">Work Experience</h2>
           <div className="space-y-8">
+          <Card className="transition-all duration-500 hover:scale-105">
+              <CardHeader>
+                <div className="flex justify-between items-start">
+                  <div>
+                    <CardTitle>Full Stack / Data Engineer</CardTitle>
+                    <CardDescription>Manulife</CardDescription>
+                  </div>
+                  <Badge>Jan 2026 - Apr 2026</Badge>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                Developed and refactored AI-driven internal tools using Python and Azure, leveraging LLM orchestration and YAML-based configurations to automate insurance sales analytics and advisor data management.
+                </p>
+              </CardContent>
+            </Card>
+
             <Card className="transition-all duration-500 hover:scale-105">
               <CardHeader>
                 <div className="flex justify-between items-start">
