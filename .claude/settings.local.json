@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python \"C:\\\\Users\\\\16474\\\\.claude\\\\plugins\\\\cache\\\\ui-ux-pro-max-skill\\\\ui-ux-pro-max\\\\2.5.0\\\\.claude\\\\skills\\\\ui-ux-pro-max\\\\scripts\\\\search.py\" \"personal portfolio developer fintech AI dark minimal\" --design-system -p \"James Hong Portfolio\" -f markdown)",
+      "Bash(Get-ChildItem \"C:\\\\Users\\\\16474\\\\.claude\\\\plugins\\\\cache\\\\ui-ux-pro-max-skill\" -Recurse -Name)",
+      "Read(//c/Users/16474/.claude/plugins/cache/ui-ux-pro-max-skill/ui-ux-pro-max/2.5.0/src/**)",
+      "Read(//c/Users/16474/.claude/plugins/cache/ui-ux-pro-max-skill/ui-ux-pro-max/2.5.0/cli/**)",
+      "Bash(npm run *)"
+    ]
+  }
+}

@@ -4,18 +4,13 @@ import { GeistMono } from 'geist/font/mono'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'James Hong',
-  description: 'Computer Science & Finance Student',
-  generator: 'James Hong',
+  title: 'James Hong — Software Engineer',
+  description: 'Fourth-year CS + Finance student at Waterloo building AI systems, data pipelines, and fintech tools.',
 }
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <head>
         <style>{`
 html {
