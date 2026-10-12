@@ -15,7 +15,7 @@ const KONAMI = [
   "a",
 ]
 
-const EMOJI = ["🎉", "✨", "🚀", "📈", "💹", "🎊"]
+const EMOJI = ["🤺", "🎉", "✨", "📈", "🟥", "🟩"]
 
 type Particle = {
   id: number
@@ -84,12 +84,12 @@ export function EasterEgg() {
         </span>
       ))}
       <div
-        className="relative mx-4 max-w-sm rounded-lg border border-border bg-card px-6 py-5 text-center shadow-xl"
+        className="relative mx-4 max-w-sm rounded-2xl border border-border bg-card px-6 py-5 text-center shadow-xl"
         style={{ animation: "pop-in 0.3s ease-out" }}
       >
-        <p className="text-lg font-semibold">You found the secret code 🎮</p>
+        <p className="text-lg font-semibold">Touché! 🤺</p>
         <p className="mt-2 text-sm text-muted-foreground">
-          Nice — you're clearly someone who reads the fine print. Let's connect.
+          You found the secret code. Clearly someone who reads the fine print, let's talk.
         </p>
         <a
           href="mailto:j8hong@uwaterloo.ca"
