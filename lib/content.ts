@@ -3,7 +3,7 @@
 
 export const site = {
   name: "James Hong",
-  chineseName: "洪锦树",
+  chineseName: "錦樹",
   email: "j8hong@uwaterloo.ca",
   linkedin: "https://linkedin.com/in/james-hong-uw",
   github: "https://github.com/jameshjs",

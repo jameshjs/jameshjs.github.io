@@ -1,6 +1,7 @@
 import Link from "next/link"
 
 import { site } from "@/lib/content"
+import { Seal } from "@/components/seal"
 
 type CoverLine = { kicker: string; title: React.ReactNode; href: string; color: string }
 
@@ -58,39 +59,48 @@ const right: CoverLine[] = [
   },
 ]
 
-function Line({ line, align = "left" }: { line: CoverLine; align?: "left" | "right" }) {
+function Line({ line, n, align = "left" }: { line: CoverLine; n: number; align?: "left" | "right" }) {
+  const right = align === "right"
   return (
     <Link
       href={line.href}
-      className={`group block max-w-[17rem] ${align === "right" ? "md:ml-auto md:text-right" : ""}`}
+      className={`group block max-w-[17rem] border-t border-neutral-950/40 pt-3 ${right ? "md:ml-auto md:text-right" : ""}`}
     >
-      <p className={`inline-block px-1.5 py-0.5 font-mono text-[11px] font-semibold uppercase tracking-[0.2em] text-white ${line.color}`}>
-        {line.kicker}
-      </p>
-      <p className="mt-1 text-lg font-semibold leading-snug decoration-2 underline-offset-4 group-hover:underline">
+      <div className={`flex items-center gap-2 ${right ? "md:flex-row-reverse" : ""}`}>
+        <span className="font-serif text-2xl italic leading-none">{String(n).padStart(2, "0")}</span>
+        <span className={`px-1.5 py-0.5 font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-white ${line.color}`}>
+          {line.kicker}
+        </span>
+      </div>
+      <p className="mt-2 text-lg font-semibold leading-snug decoration-2 underline-offset-4 group-hover:underline">
         {line.title}
       </p>
     </Link>
   )
 }
 
-function Starburst() {
-  const points = Array.from({ length: 32 }, (_, i) => {
-    const r = i % 2 ? 42 : 50
-    const a = (i / 32) * Math.PI * 2
-    return `${50 + r * Math.cos(a)},${50 + r * Math.sin(a)}`
-  }).join(" ")
+// a slowly turning ring of text around a "say hi" button
+function RingBadge() {
+  const text = "NOW OPEN TO SUMMER 2027 \u2726 NEW GRAD 2028 \u2726 "
   return (
-    <div className="relative h-28 w-28 rotate-12 transition-transform duration-500 hover:rotate-[372deg] sm:h-32 sm:w-32">
-      <svg viewBox="0 0 100 100" className="absolute inset-0 h-full w-full fill-red drop-shadow-md" aria-hidden>
-        <polygon points={points} />
+    <a
+      href={`mailto:${site.email}`}
+      className="group relative block h-28 w-28 transition-transform hover:scale-105 sm:h-36 sm:w-36"
+      aria-label="Email James: open to summer 2027 and new grad 2028 roles"
+    >
+      <span className="absolute inset-0 rounded-full bg-red shadow-[0_10px_25px_-8px_rgb(0_0_0/0.5)]" />
+      <svg viewBox="0 0 100 100" className="absolute inset-0 animate-[spin_22s_linear_infinite]" aria-hidden>
+        <defs>
+          <path id="ring" d="M50,50 m-37,0 a37,37 0 1,1 74,0 a37,37 0 1,1 -74,0" />
+        </defs>
+        <text className="fill-white font-mono" fontSize="7" letterSpacing="1.15">
+          <textPath href="#ring">{text}</textPath>
+        </text>
       </svg>
-      <p className="relative flex h-full flex-col items-center justify-center text-center leading-tight text-white">
-        <span className="font-mono text-[10px] uppercase tracking-widest">now open to</span>
-        <span className="font-serif text-xl">2027 & 2028</span>
-        <span className="font-mono text-[10px] uppercase tracking-widest">roles</span>
-      </p>
-    </div>
+      <span className="absolute inset-0 flex items-center justify-center font-serif text-2xl italic text-white sm:text-3xl">
+        say hi
+      </span>
+    </a>
   )
 }
 
@@ -112,9 +122,31 @@ function Barcode() {
   )
 }
 
+// printer's colour bar, built from the site's four inks
+function ColorBar() {
+  return (
+    <div className="hidden items-center gap-3 md:flex" aria-hidden>
+      <div className="flex">
+        {["bg-blue", "bg-red", "bg-yellow", "bg-green", "bg-neutral-950", "bg-neutral-500", "bg-white"].map((c) => (
+          <span key={c} className={`h-4 w-4 border border-neutral-950/60 ${c}`} />
+        ))}
+      </div>
+      <span className="font-mono text-[10px] uppercase tracking-[0.2em]">Proof 04 · 2026</span>
+    </div>
+  )
+}
+
+const cutout = "/images/me-venice.webp"
+
 export function MagazineCover() {
   return (
-    <section className="relative overflow-hidden bg-yellow text-neutral-950">
+    <section className="grain relative overflow-hidden bg-yellow text-neutral-950">
+      {/* crop marks */}
+      <span className="crop-mark left-2 top-2 border-l border-t" />
+      <span className="crop-mark right-2 top-2 border-r border-t" />
+      <span className="crop-mark bottom-2 left-2 border-b border-l" />
+      <span className="crop-mark bottom-2 right-2 border-b border-r" />
+
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {/* issue strip */}
         <div className="flex items-center justify-between border-b-2 border-neutral-950 py-3 font-mono text-[11px] uppercase tracking-[0.2em]">
@@ -125,44 +157,54 @@ export function MagazineCover() {
 
         {/* masthead */}
         <div className="relative select-none">
-          <p className="absolute left-0 top-[4%] z-0 font-serif text-2xl italic sm:left-[3%] sm:top-[14%] sm:text-5xl">James</p>
+          <div className="absolute left-0 top-[4%] z-0 flex items-start gap-2 sm:left-[3%] sm:top-[14%] sm:gap-3">
+            <p className="font-serif text-2xl italic sm:text-5xl">James</p>
+            <Seal className="mt-2 hidden rotate-[-4deg] text-sm sm:inline-flex" />
+          </div>
           <h1
             className="text-center font-serif leading-[0.78] tracking-[-0.03em]"
-            style={{ fontSize: "clamp(7rem, 30vw, 23rem)" }}
+            style={{ fontSize: "clamp(7rem, 30vw, 23rem)", textShadow: "0.028em 0.022em 0 hsl(var(--red))" }}
           >
             HONG
           </h1>
-          <p
-            className="absolute right-0 top-[18%] font-serif text-sm tracking-[0.3em] text-neutral-800 [writing-mode:vertical-rl]"
-            aria-label="Chinese name"
-          >
-            {site.chineseName}
+          <p className="absolute right-0 top-[20%] hidden font-mono text-[10px] uppercase tracking-[0.35em] [writing-mode:vertical-rl] sm:block">
+            N° 04 — Autumn edition
           </p>
         </div>
 
         {/* cover body: lines | cutout | lines */}
         <div className="relative grid items-end md:grid-cols-[1fr_minmax(0,26rem)_1fr]">
-          <div className="order-2 grid grid-cols-2 gap-6 pb-8 pt-8 md:order-1 md:grid-cols-1 md:gap-8 md:pb-10 md:pt-0 [&>*:nth-child(3)]:hidden md:[&>*:nth-child(3)]:block">
-            {left.map((line) => (
-              <Line key={line.kicker} line={line} />
+          <div className="order-2 grid grid-cols-2 gap-6 pb-8 pt-8 md:order-1 md:grid-cols-1 md:gap-7 md:pb-10 md:pt-0 [&>*:nth-child(3)]:hidden md:[&>*:nth-child(3)]:block">
+            {left.map((line, i) => (
+              <Line key={line.kicker} line={line} n={i + 1} />
             ))}
           </div>
 
-          {/* the cutout stands in front of the masthead */}
+          {/* the cutout stands in front of the masthead, printed off-register */}
           <div className="relative order-1 z-10 -mt-[9vw] md:order-2 md:-mt-[14rem]">
-            <img
-              src="/images/me-venice.webp"
-              alt="James Hong in a flat cap and dark coat with a red rose, looking to the side"
-              className="mx-auto w-[68%] drop-shadow-[0_20px_30px_rgb(0_0_0/0.25)] md:w-full"
-            />
-            <div className="absolute -right-2 top-[18%] origin-top-right scale-75 sm:right-0 sm:scale-100 md:-left-6 md:right-auto md:top-[24%]">
-              <Starburst />
+            <div className="relative mx-auto w-[68%] md:w-full">
+              <div
+                className="halftone absolute left-1/2 top-[2%] aspect-square w-[105%] -translate-x-1/2"
+                style={{ "--dot": "var(--red)" } as React.CSSProperties}
+              />
+              <div
+                className="riso-shadow absolute inset-0 bg-blue/90"
+                style={{ maskImage: `url(${cutout})`, WebkitMaskImage: `url(${cutout})`, translate: "14px -8px" }}
+              />
+              <img
+                src={cutout}
+                alt="James Hong in a flat cap and dark coat with a red rose, looking to the side"
+                className="relative block w-full"
+              />
+            </div>
+            <div className="absolute -right-1 top-[16%] sm:right-0 md:-left-8 md:right-auto md:top-[22%]">
+              <RingBadge />
             </div>
           </div>
 
-          <div className="order-3 grid grid-cols-2 gap-6 pb-10 md:grid-cols-1 md:gap-8 [&>*:nth-child(3)]:hidden md:[&>*:nth-child(3)]:block">
-            {right.map((line) => (
-              <Line key={line.kicker} line={line} align="right" />
+          <div className="order-3 grid grid-cols-2 gap-6 pb-10 md:grid-cols-1 md:gap-7 [&>*:nth-child(3)]:hidden md:[&>*:nth-child(3)]:block">
+            {right.map((line, i) => (
+              <Line key={line.kicker} line={line} n={i + 4} align="right" />
             ))}
           </div>
         </div>
@@ -174,7 +216,10 @@ export function MagazineCover() {
           <p className="max-w-md font-serif text-xl italic leading-snug sm:text-2xl">
             “I build data and AI infrastructure for fintech.”
           </p>
-          <Barcode />
+          <div className="flex items-center gap-6">
+            <ColorBar />
+            <Barcode />
+          </div>
         </div>
       </div>
     </section>

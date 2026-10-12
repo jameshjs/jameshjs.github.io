@@ -5,6 +5,7 @@ import { experience, projects, site, stats } from "@/lib/content"
 import { cn } from "@/lib/utils"
 import { ProjectCard } from "@/components/project-card"
 import { MagazineCover } from "@/components/magazine-cover"
+import { Seal } from "@/components/seal"
 
 const statColor = {
   blue: "bg-blue text-white",
@@ -55,7 +56,9 @@ export default function Home() {
               >
                 Say hi <Mail className="h-4 w-4" />
               </a>
-              <span className="ml-2 font-hand text-3xl text-muted-foreground">— James</span>
+              <span className="ml-2 flex items-center gap-2 font-hand text-3xl text-muted-foreground">
+                — James <Seal className="rotate-[-4deg] text-[11px]" />
+              </span>
             </div>
           </div>
         </div>
