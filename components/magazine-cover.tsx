@@ -151,11 +151,11 @@ export function MagazineCover() {
           {/* the cutout stands in front of the masthead */}
           <div className="relative order-1 z-10 -mt-[9vw] md:order-2 md:-mt-[14rem]">
             <img
-              src="/images/me-hero.webp"
-              alt="James Hong smiling, wearing a navy t-shirt"
+              src="/images/me-venice.webp"
+              alt="James Hong in a flat cap and dark coat with a red rose, looking to the side"
               className="mx-auto w-[68%] drop-shadow-[0_20px_30px_rgb(0_0_0/0.25)] md:w-full"
             />
-            <div className="absolute -right-2 top-[18%] origin-top-right scale-75 sm:right-0 sm:scale-100 md:-right-10 md:top-[12%]">
+            <div className="absolute -right-2 top-[18%] origin-top-right scale-75 sm:right-0 sm:scale-100 md:-left-6 md:right-auto md:top-[24%]">
               <Starburst />
             </div>
           </div>

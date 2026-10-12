@@ -13,6 +13,7 @@ const OUT = "public/images"
 const photos = [
   ["cutouts/hero4.png", "me-hero", 1200, true],
   ["cutouts/hero2.png", "me-leaning", 1000, true],
+  ["cutouts/hero1.png", "me-venice", 1200, true],
   ["fencing1.png", "me-fencing-gear", 1000, true],
   ["fencing_1.JPG", "fencing-action-1", 1600],
   ["fencing_2.JPG", "fencing-action-2", 1600],
