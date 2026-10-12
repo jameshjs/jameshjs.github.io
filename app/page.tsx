@@ -4,6 +4,7 @@ import { ArrowRight, ArrowUpRight, Github, Linkedin, Mail } from "lucide-react"
 import { experience, projects, site, stats } from "@/lib/content"
 import { cn } from "@/lib/utils"
 import { ProjectCard } from "@/components/project-card"
+import { MagazineCover } from "@/components/magazine-cover"
 
 const statColor = {
   blue: "bg-blue text-white",
@@ -26,33 +27,22 @@ export default function Home() {
 
   return (
     <>
-      {/* Hero */}
-      <section className="relative overflow-hidden">
-        <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 pb-12 pt-12 sm:px-6 md:grid-cols-[1.25fr_1fr] md:pb-20 md:pt-20">
-          <div className="relative z-10">
-            <p className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1 text-sm">
-              <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green opacity-60" />
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-green" />
-              </span>
-              Currently engineering @ Wealthsimple
+      <MagazineCover />
+
+      {/* Editor's letter */}
+      <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6 md:py-24">
+        <div className="grid gap-10 md:grid-cols-[200px_1fr]">
+          <p className="font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">
+            <span className="mr-3 inline-block h-2 w-2 rounded-full bg-yellow" />
+            Editor's letter
+          </p>
+          <div className="max-w-2xl">
+            <p className="text-xl leading-relaxed text-neutral-800 first-letter:float-left first-letter:mr-3 first-letter:font-serif first-letter:text-7xl first-letter:leading-[0.8] sm:text-2xl">
+              Hi, I'm James, a CS &amp; Finance student at the University of Waterloo. I've shipped data pipelines
+              and agent tooling at Wealthsimple, Manulife and CIHI, and I like systems where the numbers have to be
+              right. Off the clock, I'm an épée fencer and president of the Waterloo Fencing Club.
             </p>
-
-            <h1 className="font-serif text-5xl leading-[1.02] tracking-tight sm:text-6xl lg:text-7xl">
-              I build <span className="highlight">data</span> and{" "}
-              <span className="highlight" style={{ "--hl": "var(--blue)" } as React.CSSProperties}>
-                AI infrastructure
-              </span>{" "}
-              for <em className="italic">fintech</em>.
-            </h1>
-
-            <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-              Hi, I'm James, a CS &amp; Finance student at the University of Waterloo. I've shipped pipelines and
-              agent tooling at Wealthsimple, Manulife and CIHI. Off the clock, I'm an épée fencer and president of
-              the Waterloo Fencing Club.
-            </p>
-
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-8 flex flex-wrap items-center gap-3">
               <Link
                 href="/projects"
                 className="inline-flex items-center gap-2 rounded-full bg-foreground px-5 py-2.5 text-sm font-medium text-background transition-transform hover:-translate-y-0.5"
@@ -65,28 +55,8 @@ export default function Home() {
               >
                 Say hi <Mail className="h-4 w-4" />
               </a>
+              <span className="ml-2 font-hand text-3xl text-muted-foreground">— James</span>
             </div>
-          </div>
-
-          {/* cutout with floating stickers */}
-          <div className="relative mx-auto aspect-[4/5] w-full max-w-sm md:max-w-none">
-            <div className="absolute inset-x-[6%] bottom-0 top-[16%] rounded-[45%_55%_50%_50%/55%_50%_50%_45%] bg-yellow" />
-            <div className="absolute -left-2 top-[22%] h-16 w-16 rounded-full bg-blue/90 sm:h-20 sm:w-20" />
-            <div className="absolute bottom-[12%] right-0 h-10 w-10 rotate-12 rounded-lg bg-red/90" />
-            <img
-              src="/images/me-hero.webp"
-              alt="James smiling, wearing a navy t-shirt"
-              className="sticker absolute bottom-0 left-1/2 h-[96%] w-auto max-w-none -translate-x-1/2 object-contain"
-            />
-            <span className="absolute left-0 top-[8%] -rotate-6 rounded-full bg-card px-3 py-1.5 text-sm font-medium shadow-md">
-              📈 CFA Level I ✓
-            </span>
-            <span className="absolute right-0 top-[38%] rotate-6 rounded-full bg-card px-3 py-1.5 text-sm font-medium shadow-md">
-              🤺 épée
-            </span>
-            <span className="absolute bottom-[4%] left-[2%] -rotate-3 rounded-full bg-card px-3 py-1.5 text-sm font-medium shadow-md">
-              📍 Toronto / Waterloo
-            </span>
           </div>
         </div>
       </section>
