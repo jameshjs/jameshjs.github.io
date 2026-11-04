@@ -19,7 +19,7 @@ import {
 
 const navItems = [
   { icon: Home, label: "Home", href: "/" },
-  { icon: Briefcase, label: "Work", href: "/#work" },
+  { icon: Briefcase, label: "Work", href: "/#experience" },
   { icon: FolderGit2, label: "Projects", href: "/projects" },
   { icon: Heart, label: "Life", href: "/life" },
   { icon: Swords, label: "Fencing", href: "/life#fencing" },
@@ -57,14 +57,6 @@ export function CommandPalette() {
 
   return (
     <>
-      <button
-        type="button"
-        onClick={() => setOpen(true)}
-        className="flex items-center gap-1 rounded-md border border-border px-2 py-1 text-xs text-muted-foreground transition-colors hover:bg-accent hover:text-foreground rounded-full"
-      >
-        <span className="font-mono">⌘</span>
-        <span className="font-mono">K</span>
-      </button>
       <CommandDialog open={open} onOpenChange={setOpen}>
         <CommandInput placeholder="Jump to a page or link..." />
         <CommandList>

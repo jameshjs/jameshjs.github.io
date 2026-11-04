@@ -1,6 +1,5 @@
 import type { Metadata } from "next"
-import { Caveat, DM_Sans, Instrument_Serif } from "next/font/google"
-import { GeistMono } from "geist/font/mono"
+import { Figtree } from "next/font/google"
 
 import { site } from "@/lib/content"
 import { SiteHeader } from "@/components/site-header"
@@ -8,9 +7,7 @@ import { SiteFooter } from "@/components/site-footer"
 import { EasterEgg } from "@/components/easter-egg"
 import "./globals.css"
 
-const sans = DM_Sans({ subsets: ["latin"], variable: "--font-sans" })
-const serif = Instrument_Serif({ subsets: ["latin"], weight: "400", style: ["normal", "italic"], variable: "--font-serif" })
-const hand = Caveat({ subsets: ["latin"], variable: "--font-hand" })
+const sans = Figtree({ subsets: ["latin"], variable: "--font-sans" })
 
 const description = "Software engineer building data and AI infrastructure for fintech. CS & Finance at Waterloo."
 
@@ -31,7 +28,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${sans.variable} ${serif.variable} ${hand.variable} ${GeistMono.variable}`}>
+    <html lang="en" className={sans.variable}>
       <body className="flex min-h-screen flex-col">
         <EasterEgg />
         <SiteHeader />

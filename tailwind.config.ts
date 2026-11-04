@@ -14,16 +14,13 @@ const config: Config = {
   	extend: {
   		fontFamily: {
   			sans: ['var(--font-sans)', 'system-ui', 'sans-serif'],
-  			serif: ['var(--font-serif)', 'Georgia', 'serif'],
-  			hand: ['var(--font-hand)', 'cursive'],
-  			mono: ['var(--font-geist-mono)', 'ui-monospace', 'monospace']
+  			mono: ['ui-monospace', 'monospace']
   		},
   		colors: {
   			blue: 'hsl(var(--blue))',
   			red: 'hsl(var(--red))',
   			yellow: 'hsl(var(--yellow))',
   			green: 'hsl(var(--green))',
-  			paper: 'hsl(var(--paper))',
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {

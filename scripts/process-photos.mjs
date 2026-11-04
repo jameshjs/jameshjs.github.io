@@ -19,11 +19,10 @@ const photos = [
   ["fencing_2.JPG", "fencing-action-2", 1600],
   ["fencing_awards.jpg", "fencing-awards", 1400],
   ["fencing_team_elevator.jpeg", "fencing-team", 1400],
-  ["hobby_poker.jpg", "poker", 600],
   ["hero1.jpg", "venice-gondolas", 1400],
   ["hero3.jpg", "venice-san-marco", 1400],
-  ["hero5.jpg", "venice-canal", 1400],
-  ["shanghai_2.jpg", "shanghai", 1400],
+  ["hero2.jpg", "me-la-tee", 1400],
+  ["hackathon1.jpg", "me-hackathon", 1400],
   ["waterloo1.png", "waterloo-hat", 1200],
   ["waterloo2.jpg", "waterloo-e7", 1400],
 ]

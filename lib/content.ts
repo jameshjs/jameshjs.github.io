@@ -1,13 +1,16 @@
 // All site copy lives here. Add a project by appending to `projects`;
 // drop its image/gif in public/images and point `media.src` at it.
+// Add a life photo by appending to a group's `photos` in `lifeGroups`.
+
+import { Dumbbell, type LucideIcon, MapPin, Plane, Spade, Swords } from "lucide-react"
 
 export const site = {
   name: "James Hong",
-  chineseName: "錦樹",
   email: "j8hong@uwaterloo.ca",
   linkedin: "https://linkedin.com/in/james-hong-uw",
   github: "https://github.com/jameshjs",
   url: "https://jameshjs.github.io",
+  booking: "https://cal.com/james-hong-anxaak/15min",
 }
 
 export type Job = {
@@ -16,6 +19,8 @@ export type Job = {
   dates: string
   location: string
   current?: boolean
+  // square-ish logo in public/images/logos; jobs without one show their initial
+  logo?: string
   points: string[]
   stack: string[]
 }
@@ -23,6 +28,7 @@ export type Job = {
 export const experience: Job[] = [
   {
     company: "Wealthsimple",
+    logo: "/images/logos/wealthsimple.svg",
     role: "Software Engineer",
     dates: "Sept – Dec 2026",
     location: "Toronto",
@@ -35,6 +41,7 @@ export const experience: Job[] = [
   },
   {
     company: "Manulife",
+    logo: "/images/logos/manulife.png",
     role: "Software Engineer",
     dates: "Jan – Apr 2026",
     location: "Toronto",
@@ -47,6 +54,7 @@ export const experience: Job[] = [
   },
   {
     company: "WatStreet",
+    logo: "/images/logos/watstreet.png",
     role: "Software Engineer",
     dates: "Sept – Dec 2025",
     location: "Toronto",
@@ -58,6 +66,7 @@ export const experience: Job[] = [
   },
   {
     company: "Food For Good",
+    logo: "/images/logos/food-for-good.png",
     role: "Software Engineer",
     dates: "May – Aug 2025",
     location: "Toronto",
@@ -69,6 +78,7 @@ export const experience: Job[] = [
   },
   {
     company: "Canadian Institute for Health Information",
+    logo: "/images/logos/cihi.svg",
     role: "Software Engineer",
     dates: "Aug – Dec 2024",
     location: "Toronto",
@@ -145,9 +155,74 @@ export const projects: Project[] = [
   },
 ]
 
-export const stats = [
-  { value: "5", label: "software engineering roles", color: "blue" },
-  { value: "100M+", label: "records through my pipelines", color: "red" },
-  { value: "CFA", label: "Level I passed", color: "yellow" },
-  { value: "Prez", label: "Waterloo Fencing Club", color: "green" },
-] as const
+export type LifeGroup = {
+  id: string
+  label: string
+  title: string
+  note: string
+  icon: LucideIcon
+  color: string
+  photos: { src: string; alt: string }[]
+}
+
+// Shown under the intro on the home page and in the travel group on /life.
+export const heroPhotos: LifeGroup["photos"] = [
+  { src: "/images/venice-gondolas.webp", alt: "James by the gondolas in Venice" },
+  { src: "/images/me-la-tee.webp", alt: "James leaning against a brick wall in a Los Angeles t-shirt" },
+  { src: "/images/venice-san-marco.webp", alt: "James in front of St Mark's Basilica" },
+]
+
+export const lifeGroups: LifeGroup[] = [
+  {
+    id: "fencing",
+    label: "fencing",
+    title: "the fencers!",
+    note: "Épée is the heaviest of the three blades: the whole body is target, there's no right-of-way, and whoever lands first scores. I'm president of the Waterloo Fencing Club, which mostly means practices, tournament trips, and making sure everyone fits in the elevator.",
+    icon: Swords,
+    color: "text-blue",
+    photos: [
+      { src: "/images/fencing-action-1.webp", alt: "James lunging in an épée bout" },
+      { src: "/images/fencing-team.webp", alt: "The Waterloo fencing team squeezed into an elevator with their gear" },
+      { src: "/images/fencing-action-2.webp", alt: "Two fencers mid-bout" },
+      { src: "/images/fencing-awards.webp", alt: "Fencing club members holding Waterloo plaques at an awards night" },
+    ],
+  },
+  {
+    id: "gym",
+    label: "gym & sports",
+    title: "the gym & other sports",
+    note: "My reset button between deploys and bouts, plus whatever gets a group together outside.",
+    icon: Dumbbell,
+    color: "text-green",
+    photos: [],
+  },
+  {
+    id: "poker",
+    label: "poker",
+    title: "the poker table",
+    note: "Expected value, but with friends and snacks. Yes, I'll fold the 5-2.",
+    icon: Spade,
+    color: "text-red",
+    photos: [],
+  },
+  {
+    id: "places",
+    label: "places",
+    title: "oakville → waterloo",
+    note: "Grew up in Oakville and learned to build in Waterloo.",
+    icon: MapPin,
+    color: "text-yellow",
+    photos: [
+      { src: "/images/waterloo-e7.webp", alt: "Banners hanging in the E7 building at Waterloo" },
+    ],
+  },
+  {
+    id: "travel",
+    label: "travel",
+    title: "...and sometimes, i travel",
+    note: "Gondolas, San Marco, and a lot of walking.",
+    icon: Plane,
+    color: "text-blue",
+    photos: heroPhotos,
+  },
+]
