@@ -114,7 +114,7 @@ export default function Home() {
 
       {/* Life */}
       <section id="life" className="scroll-mt-10">
-        <SectionHeading title="life" subtitle="there's more to me than pipelines" />
+        <SectionHeading title="life" />
         <div className="mt-8">
           <LifeGroup group={lifeGroups[0]} />
         </div>
